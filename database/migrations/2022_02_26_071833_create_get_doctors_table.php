@@ -14,11 +14,11 @@ class CreateGetDoctorsTable extends Migration
     public function up()
     {
         Schema::create('get_doctors', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
             $table->string('name');
             $table->string('phone_number');
             $table->string('area');
-            $table->string('specialtie');
+           
             $table->string('note')->nullable();
             $table->timestamps();
         });

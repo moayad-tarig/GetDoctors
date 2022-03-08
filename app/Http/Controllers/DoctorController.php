@@ -24,7 +24,7 @@ class DoctorController extends Controller
             'phone_number' => 'required',
             'area' => 'required',
             'image' => 'nullable',
-            'specialtie' => 'required',
+            
 
         ]);
         $id = $request->user()->id;
@@ -35,7 +35,7 @@ class DoctorController extends Controller
     
     public function request(){
         $area = Auth()->user()->area;
-        $specialtie = Auth()->user()->specialtie;
+       
 
         $requests = GetDoctor::where('area', $area)->get();
         return view('doctor.request', [
@@ -49,7 +49,7 @@ class DoctorController extends Controller
             'user_id' => Auth()->user()->id, 
             'name' => $request->name,
             'area' => $request->area,
-            'specialtie' => $request->specialtie,
+          
             'phone_number' => $request->phone_number
         ]);
 

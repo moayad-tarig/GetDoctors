@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>أحصل على طبيبك</title>
+    <title>رعاية</title>
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
@@ -78,7 +78,7 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-primary" dir="rtl">
             <div class="container-fluid">
-                <a class="navbar-brand text-light" href="#">Care Unit</a>
+                <a class="navbar-brand text-light" href="#">رعــايــة</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -92,9 +92,7 @@
                         <li class="nav-item">
                             <a class="nav-link text-light" href="{{ route('login') }}">صفحة الطبيب</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-light" href="#">من نحن</a>
-                        </li>
+                    
 
 
                     </ul>
@@ -133,17 +131,7 @@
                             placeholder="رقم الهاتف الخاص بك" name="phone_number">
 
                     </div>
-                    <div class="form-group">
-                        <label for="exampleFormControlSelect1" class="text-white h5">تخصص الطبيب</label>
-                        <select class="form-control mb-2" id="special" name="specialtie">
-                            <option value="medical">طبيب عام</option>
-                            <option value="medicine">اخصائي باطنية</option>
-                            <option value="surgery">اخصائي جراحة</option>
-                            <option value="obs">نساء وولادة</option>
-                            <option value="pids">اخصائي أطفال</option>
-                            <option value="nurse">ممرض</option>
-                        </select>
-                    </div>
+                  
 
                     <div class="form-group">
                         <label for="exampleFormControlSelect1" class="h5 text-white"> المنطقة</label>

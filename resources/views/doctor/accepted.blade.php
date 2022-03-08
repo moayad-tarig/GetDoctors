@@ -134,8 +134,7 @@
                                 <h5 class="card-title">name : <span class="text-success">{{ $request->name }} </span>
                                 </h5>
                                 <p class="card-text">note: <span class="text-success"> {{ $request->note }}  </span></p>
-                                <p class="card-text"> Ask For : <span class="text-success"> {{ $request->specialtie }}
-                                    </span></p>
+                            
                                 <p class="card-text"> Phone Number : <span class="text-success"> {{
                                         $request->phone_number }} </span></p>
                                 <a href="#" class="">
@@ -144,7 +143,7 @@
                                     <input type="hidden" name="name" value="{{ $request->name }}">
                                     <input type="hidden" name="id" value="{{ $request->id }}">
                                     <input type="hidden" name="note" value="{{ $request->note }}">
-                                    <input type="hidden" name="specialtie" value="{{ $request->specialtie }}">
+                              
                                     <input type="hidden" name="area" value="{{ $request->area }}">
                                     <input type="hidden" name="phone_number" value="{{ $request->phone_number }}">
                                     <button type="submit" class="btn btn-primary">Accept</button>
@@ -208,7 +207,6 @@
 
 
 <script>
-    // document.getElementById('special').getElementsByTagName('option')[{{ auth()->user()->specialtie }}].selected = 'selected'
 
       
 </script>

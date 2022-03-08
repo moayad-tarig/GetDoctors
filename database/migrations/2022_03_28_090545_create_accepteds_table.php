@@ -1,5 +1,4 @@
 <?php
-
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -14,14 +13,17 @@ class CreateAcceptedsTable extends Migration
     public function up()
     {
         Schema::create('accepteds', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
             $table->unsignedBigInteger('accept_id');
             $table->string('name');
             $table->string('phone_number');
-            $table->string('specialtie');
+           
             $table->string('area');
             $table->string('note')->nullable();
-            $table->foreignId('user_id')->constrained();
+            // $table->unsignedBigInteger('user_id');
+            $table->integer('user_id')->unsigned();
+            
+            $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();
         });
     }

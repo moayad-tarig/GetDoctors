@@ -31,7 +31,7 @@
 <body>
 
     <div class="wrapper">
-        <div class="sidebar" data-color="purple" data-image="{{ asset('assets/img/sidebar-5.jpg') }}">
+        <div class="sidebar" data-color="red" data-image="{{ asset('assets/img/sidebar-5.jpg') }}">
 
             <!--
 
@@ -51,7 +51,7 @@
                     <li class="">
                         <a href="{{ url('/home') }}">
                             <i class="fa fa-user"></i>
-                            <p>الملف الشخصي</p>
+                            <p>الأطباء</p>
                         </a>
                     </li>
                     <li class="active">
@@ -60,12 +60,7 @@
                             <p>الطلبات</p>
                         </a>
                     </li>
-                    <li class="">
-                        <a href="{{ route('accepted') }}">
-                            <i class="pe-7s-graph"></i>
-                            <p>  الطلبات المقبولة</p>
-                        </a>
-                    </li>
+            
 
                 </ul>
             </div>
@@ -124,35 +119,41 @@
                 </div><br />
                 @endif
                 <div class="container-fluid">
-                    <p class="text-danger">الطلبات المتوفرة حسب موقعك الجغرافي</p>
+
                     <div class="row">
                         @forelse ($requests as $request)
-
-                        <div class="card col-sm-6 " style="width: 18rem;">
-
-                            <div class="card-body text-center ">
-                                <h5 class="card-title">name : <span class="text-success">{{ $request->name }} </span>
-                                </h5>
-                                <p class="card-text">note: <span class="text-success"> {{ $request->note }}  </span></p>
+                        <!-- table -->
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Note</th>
+                                    <th scope="col">Area</th>
+                                    <th scope="col">Phone Number</th>
+                               </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">{{ $loop->iteration }}</th>
+                                    <td><span class="text-success">{{ $request->name }} </span></td>
+                                    <td><span class="text-success"> {{ $request->note }} </span>
+                                    </td>
+                                    <td>
+                                        <span class="text-success"> {{
+                                            $request->phone_number }} </span>
+                                    </td>
                                 
-                                <p class="card-text"> Phone Number : <span class="text-success"> {{
-                                        $request->phone_number }} </span></p>
-                                <a href="#" class="">
-                                    <form action="{{ route('accept') }}" method="POST">
-                                    @csrf
-                                    <input type="hidden" name="name" value="{{ $request->name }}">
-                                    <input type="hidden" name="id" value="{{ $request->id }}">
-                                    <input type="hidden" name="note" value="{{ $request->note }}">
-                                   
-                                    <input type="text" name="area" value="{{ $request->area }}">
-                                    <input type="hidden" name="phone_number" value="{{ $request->phone_number }}">
-                                    <button type="submit" class="btn btn-primary">Accept</button>
-                                    </form>
-                                </a>
-                            </div>
-                        </div>
+
+                                </tr>
+
+                        </table>
+                        <!-- table End -->
+
+  
+               
                         @empty
-                        <p>لاتوجد طلبات في منطقتك الحالية</p>
+                        <p>لا توجد طلبات حاليا</p>
                         @endforelse
 
 
@@ -208,6 +209,7 @@
 
 <script>
  
+
       
 </script>
 

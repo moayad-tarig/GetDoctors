@@ -140,17 +140,7 @@
                               <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="" value="{{ auth()->user()->email }}" name="email">
                             </div>
 
-                            <div class="form-group">
-                              <label for="exampleFormControlSelect1">تخصصك الحالي ({{ auth()->user()->specialtie }})</label>
-                              <select class="form-control" id="special" name="specialtie">
-                                <option value="medical" >طبيب عام</option>
-                                <option value="medicine">اخصائي باطنية</option>
-                                <option value="surgery">اخصائي جراحة</option>
-                                <option value="obs">نساء وولادة</option>
-                                <option value="pids">اخصائي أطفال</option>
-                                <option value="nurse">ممرض</option>
-                              </select>
-                            </div>
+                           
                           
                             <div class="form-group">
                                 <label for="exampleFormControlSelect1" class="h5">  منطقة العمل الحالية ({{ auth()->user()->area }})</label>
@@ -220,8 +210,7 @@
 	<!-- Light Bootstrap Table DEMO methods, don't include it in your project! -->
 	<script src="assets/js/demo.js"></script>
     <script>
-        // document.getElementById('special').getElementsByTagName('option')[{{ auth()->user()->specialtie }}].selected = 'selected'
-
+      
       
     </script>
 

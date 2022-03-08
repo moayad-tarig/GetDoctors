@@ -18,8 +18,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('/getdoctor', 'App\Http\Controllers\GetDoctors');
 Auth::routes();
+Route::resource('/getdoctor', 'App\Http\Controllers\GetDoctors');
 
 
 
@@ -31,5 +31,13 @@ Route::group(['middleware' => ['auth', 'role:doctor']], function ()
     Route::post('/doctor/accept', [App\Http\Controllers\DoctorController::class, 'accept'])->name('accept');
     Route::get('/doctor/accepted', [App\Http\Controllers\DoctorController::class, 'accepted'])->name('accepted');
     
+});
+
+
+Route::group(['middleware' => ['auth', 'role:admin']], function (){
+    Route::get('/home', [App\Http\Controllers\adminController::class, 'index'])->name('doctor');
+    Route::resource('/home/delete', 'App\Http\Controllers\adminController');
+    Route::resource('/home/register', 'App\Http\Controllers\adminController');
+    Route::get('/home/requests', [App\Http\Controllers\adminController::class, 'request'])->name('request');
 });
 

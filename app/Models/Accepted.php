@@ -8,7 +8,15 @@ use Illuminate\Database\Eloquent\Model;
 class Accepted extends Model
 {
     use HasFactory;
-    protected $guarded = [];
+    protected $fillable = [
+        'user_id',
+        'accept_id',
+        'name',
+        'phone_number',
+      
+        'area',
+        'note',
+    ];
 
 
 

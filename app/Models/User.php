@@ -29,7 +29,7 @@ class User extends Authenticatable
         'area',
         'email',
         'image',
-        'specialtie'
+       
     ];
 
     /**
