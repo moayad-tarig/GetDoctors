@@ -137,18 +137,7 @@
                             
                                 <p class="card-text"> Phone Number : <span class="text-success"> {{
                                         $request->phone_number }} </span></p>
-                                <a href="#" class="">
-                                    <form action="{{ route('accept') }}" method="POST">
-                                    @csrf
-                                    <input type="hidden" name="name" value="{{ $request->name }}">
-                                    <input type="hidden" name="id" value="{{ $request->id }}">
-                                    <input type="hidden" name="note" value="{{ $request->note }}">
-                              
-                                    <input type="hidden" name="area" value="{{ $request->area }}">
-                                    <input type="hidden" name="phone_number" value="{{ $request->phone_number }}">
-                                    <button type="submit" class="btn btn-primary">Accept</button>
-                                    </form>
-                                </a>
+                             
                             </div>
                         </div>
                         @empty
