@@ -146,7 +146,7 @@
 
                     <div class="form-group">
                         <label for="exampleFormControlTextarea1" class="text-white h5">الملاحظات</label>
-                        <textarea class="form-control " id="exampleFormControlTextarea1" rows="3"></textarea>
+                        <textarea class="form-control " id="exampleFormControlTextarea1" rows="3" name="note"></textarea>
                     </div>
                     <button type="submit" class="btn btn-success mt-2">أحصل على طبيبك الان</button>
                     <small id="emailHelp" class="form-text text-danger d-block">البيانات المدخلة سرية ولن يتطلع عليها

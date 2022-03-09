@@ -13,6 +13,7 @@ class GetDoctor extends Model
         'name',
         'area',
         'phone_number',
+        'note'
         
     ];
     

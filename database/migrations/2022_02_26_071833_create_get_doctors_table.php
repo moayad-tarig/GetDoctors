@@ -18,7 +18,6 @@ class CreateGetDoctorsTable extends Migration
             $table->string('name');
             $table->string('phone_number');
             $table->string('area');
-           
             $table->string('note')->nullable();
             $table->timestamps();
         });

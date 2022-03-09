@@ -144,7 +144,7 @@
                                     <input type="hidden" name="id" value="{{ $request->id }}">
                                     <input type="hidden" name="note" value="{{ $request->note }}">
                                    
-                                    <input type="text" name="area" value="{{ $request->area }}">
+                                    <input type="hidden" name="area" value="{{ $request->area }}">
                                     <input type="hidden" name="phone_number" value="{{ $request->phone_number }}">
                                     <button type="submit" class="btn btn-primary">Accept</button>
                                     </form>

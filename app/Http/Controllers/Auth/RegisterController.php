@@ -33,11 +33,13 @@ class RegisterController extends Controller
     // protected $redirectTo = RouteServiceProvider::HOME;
     public function redirectTo()
     {
-        if ($this->guard()->user()->hasRole('doctor')) {
+        if ($this->guard()->user()->hasrole('admin')) {
             return '/home';
+        }else {
+
+            return '/docDashboard';
         }
 
-        return '/doctor';
     }
 
     /**

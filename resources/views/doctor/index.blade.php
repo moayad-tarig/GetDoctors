@@ -124,7 +124,7 @@
             <div class="container-fluid">
                 <div class="row">
                         {{-- Form --}}
-                        <form class="w-50" method="POST" action="{{ url('doctor/update') }}" dir="rtl">
+                        <form class="w-50" method="POST" action="{{ url('docDashboard/update') }}" dir="rtl">
                             @csrf
                             @method('PUT')
                             <div class="form-group">

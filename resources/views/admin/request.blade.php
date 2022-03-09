@@ -121,7 +121,6 @@
                 <div class="container-fluid">
 
                     <div class="row">
-                        @forelse ($requests as $request)
                         <!-- table -->
                         <table class="table">
                             <thead>
@@ -131,13 +130,15 @@
                                     <th scope="col">Note</th>
                                     <th scope="col">Area</th>
                                     <th scope="col">Phone Number</th>
-                               </tr>
+                                </tr>
                             </thead>
                             <tbody>
+                                @forelse ($requests as $request)
                                 <tr>
-                                    <th scope="row">{{ $loop->iteration }}</th>
+                                    <td scope="row">{{ $loop->iteration }}</td>
                                     <td><span class="text-success">{{ $request->name }} </span></td>
                                     <td><span class="text-success"> {{ $request->note }} </span>
+                                    <td><span class="text-success"> {{ $request->area }} </span>
                                     </td>
                                     <td>
                                         <span class="text-success"> {{
@@ -146,16 +147,17 @@
                                 
 
                                 </tr>
+                                @empty
+                                <p>لا توجد طلبات حاليا</p>
+                                @endforelse
+        
 
                         </table>
                         <!-- table End -->
 
   
                
-                        @empty
-                        <p>لا توجد طلبات حاليا</p>
-                        @endforelse
-
+                     
 
 
                     </div>

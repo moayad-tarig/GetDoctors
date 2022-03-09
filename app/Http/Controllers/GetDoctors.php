@@ -19,7 +19,7 @@ class GetDoctors extends Controller
             'name' => 'required|max:255',
             'phone_number' => 'required',
             'area' => 'required',
-            
+            'note' => 'required'
 
         ]);
         GetDoctor::create($validatedData);
