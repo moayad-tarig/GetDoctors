@@ -6,12 +6,14 @@ use App\Models\GetDoctor;
 use App\Models\Role;
 use App\Models\User;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 
 class adminController extends Controller
 {
     public function index()
     {
+        
         $doctors = User::where('id','<>',auth()->id())->get();
 
         return view('admin.index', compact('doctors', $doctors));
@@ -20,14 +22,15 @@ class adminController extends Controller
 
     public function store(Request $request)
     {
-        User::create([
+       $user = User::create([
             'name' => $request->name,
             'email' => $request->email,
-            'password' => $request->password,
+            'password' => Hash::make($request->password),
             'area' => $request->area,
             'phone_number' => $request->phone_number
         
         ]);
+        $user->attachRole("2");
         return back();
     }
 

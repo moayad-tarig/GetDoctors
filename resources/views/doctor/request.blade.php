@@ -49,7 +49,7 @@
 
                 <ul class="nav">
                     <li class="">
-                        <a href="{{ url('/home') }}">
+                        <a href="{{ url('/docDashboard') }}">
                             <i class="fa fa-user"></i>
                             <p>الملف الشخصي</p>
                         </a>

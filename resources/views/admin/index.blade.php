@@ -55,7 +55,7 @@
                         </a>
                     </li>
                     <li class="">
-                        <a href="{{ route('request') }}">
+                        <a href="{{ route('requests') }}">
                             <i class="pe-7s-graph"></i>
                             <p>الطلبات</p>
                         </a>

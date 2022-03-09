@@ -30,7 +30,15 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = RouteServiceProvider::HOME;
+    // protected $redirectTo = RouteServiceProvider::HOME;
+    public function redirectTo()
+    {
+        if ($this->guard()->user()->hasRole('doctor')) {
+            return '/home';
+        }
+
+        return '/doctor';
+    }
 
     /**
      * Create a new controller instance.

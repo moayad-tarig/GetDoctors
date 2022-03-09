@@ -42,14 +42,14 @@
 
             <div class="sidebar-wrapper">
                 <div class="logo">
-                    <a href="http://www.creative-tim.com" class="simple-text">
+                    <a href="#" class="simple-text">
                         {{ Auth()->user()->name }}
                     </a>
                 </div>
 
                 <ul class="nav">
                     <li class="">
-                        <a href="{{ url('/home') }}">
+                        <a href="{{ url('/docDashboard') }}">
                             <i class="fa fa-user"></i>
                             <p>الملف الشخصي</p>
                         </a>
